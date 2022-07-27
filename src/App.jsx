@@ -11,14 +11,15 @@ import ProductList from "./Components/ShoppingCart/ProductList";
 import CartPage from "./Components/ShoppingCart/CartPage";
 import Header from "./Components/ShoppingCart/Header";
 import PageNotFound from "./Components/ShoppingCart/PageNotFound";
+import "./style.css";
 function App() {
 	return (
 		<Router>
 			<Header />
 			<Routes>
-				<Route path="/mycart" element={<CartPage />} />
-				<Route path="*/" element={<PageNotFound />} />
-				<Route path="/" element={<ProductList />} />
+				<Route path="/cart" exact element={<CartPage />} />
+				<Route path="*" element={<PageNotFound />} />
+				<Route path="/" exact element={<ProductList />} />
 			</Routes>
 		</Router>
 	);
